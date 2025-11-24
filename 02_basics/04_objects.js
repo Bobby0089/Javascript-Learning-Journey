@@ -8,7 +8,7 @@ const user = {
 
 const newUser = new Object();
 
-console.log(user);   // This is already a singleton
+// console.log(user);   // This is already a singleton
 
 /*
 Only one user object exists
@@ -27,7 +27,7 @@ class Car {
 const c1 = new Car("BMW");
 const c2 = new Car("Audi");
 
-console.log(c1 === c2); // false
+// console.log(c1 === c2); // false
 
 
 // Object.freeze() → Prevent changes
@@ -39,7 +39,7 @@ const settings = {
 
 Object.freeze(settings);
 settings.theme = "light";  // ignored
-console.log("After freeze attempt:", settings);
+// console.log("After freeze attempt:", settings);
 
 // Object.seal() → Allow update, but can't add/remove props
 
@@ -49,7 +49,7 @@ Object.seal(config);
 config.mode = "manual"; // allowed
 config.newProp = "test"; // not allowed
 
-console.log("After seal:", config);
+// console.log("After seal:", config);
 
 // Nested Objects
 
@@ -61,7 +61,7 @@ const user1 = {
     }
 };
 
-console.log("Nested username:", user1.profile.username);
+// console.log("Nested username:", user1.profile.username);
 
 
 // Merging Objects
@@ -73,7 +73,7 @@ const obj2 = { b: 30, c: 40 };
 // const merge = Object.assign({}, obj1, obj2)
 const merged = { ...obj1, ...obj2 };
 
-console.log("Merged object:", merged);
+// console.log("Merged object:", merged);
 
 
 // Object.keys(), Object.values(), Object.entries()
@@ -84,7 +84,22 @@ const product = {
     price: 60000
 };
 
-console.log("Keys:", Object.keys(product));
-console.log("Values:", Object.values(product));
-console.log("Entries:", Object.entries(product));
+// console.log("Keys:", Object.keys(product));
+// console.log("Values:", Object.values(product));
+// console.log("Entries:", Object.entries(product));
 
+
+// Destructuring
+
+const profile = {
+    username: "Bobby",
+    role: "Developer",
+    country: "India"
+};
+
+const {role,country} = profile
+const {username : name} = profile
+
+console.log(role);
+console.log(country);
+console.log(name);
