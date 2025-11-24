@@ -30,7 +30,7 @@ function multiply(num1, num2){
     return num1*num2;               // return sends value back to caller
 }
 const result = multiply(10,6)        
-console.log("result : ", result);
+// console.log("result : ", result);
 
 //-----------------------------------
 // Default parameter
@@ -39,5 +39,45 @@ function welcome(user = "Guest") {
     console.log("Welcome,", user);
 }
 
-welcome("Bobby");
-welcome(); // uses default
+// welcome("Bobby");
+// welcome(); // uses default
+
+
+//-----------------------------------
+// Rest Parameters (...)
+// Used when number of arguments is unknown
+
+function calculateCartPrice(...num){
+    return num
+}
+
+console.log(calculateCartPrice(100,200,300,555,454));
+
+//------------------------------------
+// pasing objects and array in function
+
+const user = {
+    username : "Rohit",
+    price : 5000
+}
+
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);
+    
+}
+
+// handleObject(user)
+handleObject({
+    username: "Akash",
+    price : 10000
+})
+
+
+const myNewArray = [200, 400, 100, 600]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+
+// console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([200, 400, 500, 1000]));
