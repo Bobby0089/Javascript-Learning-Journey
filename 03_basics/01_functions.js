@@ -82,3 +82,33 @@ function returnSecondValue(getArray){
 // console.log(returnSecondValue(myNewArray));
 console.log(returnSecondValue([200, 400, 500, 1000]));
 
+// -------------------------------------------------------
+// Function Expression
+// Functions stored inside variables
+
+const sayHi = function() {
+    console.log("Hi!");
+};
+
+sayHi();
+
+// -------------------------------------------------------
+// Function Hoisting/
+// Function declarations are hoisted
+// You can call them before defining
+
+sayHello();
+
+function sayHello() {
+    console.log("Hello!");
+}
+
+
+// -------------------------------------------------------
+// Function Not Hoisted (Expression)
+
+// sayBye(); // ERROR: cannot call before initialization
+
+const sayBye = function() {
+    console.log("Bye!");
+};
