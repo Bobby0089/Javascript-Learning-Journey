@@ -24,106 +24,56 @@
         <span>Hello</span>
     </div>
 
-    <script>
-        // -------------------------------------------------------------
+</body>
+</html>
+
+
+<!--   
+        
         // 1. getElementById
-        // -------------------------------------------------------------
+        
         const byId = document.getElementById("title");
         console.log("getElementById:", byId);
 
-        // -------------------------------------------------------------
+        
         // 2. getElementsByClassName
-        // -------------------------------------------------------------
+        
         const byClass = document.getElementsByClassName("item");
         console.log("getElementsByClassName:", byClass);
 
-        // -------------------------------------------------------------
+       
         // 3. getElementsByTagName
-        // -------------------------------------------------------------
+        
         const byTag = document.getElementsByTagName("p");
         console.log("getElementsByTagName:", byTag);
 
-        // -------------------------------------------------------------
+        
         // 4. getElementsByName
-        // -------------------------------------------------------------
+        
         const byName = document.getElementsByName("username");
         console.log("getElementsByName:", byName);
 
-        // -------------------------------------------------------------
+        
         // 5. querySelector (select first match)
-        // -------------------------------------------------------------
+        
         const qs1 = document.querySelector(".item");     // first .item
         const qs2 = document.querySelector("#title");    // id
         const qs3 = document.querySelector("input[type='email']");
 
         console.log("querySelector:", qs1, qs2, qs3);
 
-        // -------------------------------------------------------------
+        
         // 6. querySelectorAll (select all matches)
-        // -------------------------------------------------------------
+       
         const qsa = document.querySelectorAll(".item");
         console.log("querySelectorAll:", qsa);
 
-        // -------------------------------------------------------------
+        
         // 7. Attribute selectors
-        // -------------------------------------------------------------
+        
         const attr1 = document.querySelector("[data-id]");
         const attr2 = document.querySelector("input[name='email']");
 
-        console.log("attribute selectors:", attr1, attr2);
+        console.log("attribute selectors:", attr1, attr2); -->
 
-        // -------------------------------------------------------------
-        // 8. nth-child selectors
-        // -------------------------------------------------------------
-        const nth = document.querySelector("ul li:nth-child(2)");
-        console.log("nth-child:", nth);
-
-        // -------------------------------------------------------------
-        // 9. Child selector (direct child)
-        // -------------------------------------------------------------
-        const childSelect = document.querySelector("ul > li");
-        console.log("child selector:", childSelect);
-
-        // -------------------------------------------------------------
-        // 10. Multiple selectors
-        // -------------------------------------------------------------
-        const multiSelect = document.querySelectorAll("h1, p, .list-item");
-        console.log("multiple selectors:", multiSelect);
-
-        // -------------------------------------------------------------
-        // 11. First & Last child
-        // -------------------------------------------------------------
-        const first = document.querySelector("ul li:first-child");
-        const last = document.querySelector("ul li:last-child");
-
-        console.log("first child:", first);
-        console.log("last child:", last);
-
-        // -------------------------------------------------------------
-        // 12. Traversal: parentElement
-        // -------------------------------------------------------------
-        const card = document.querySelector(".card");
-        console.log("parentElement:", card.parentElement);
-
-        // -------------------------------------------------------------
-        // 13. children
-        // -------------------------------------------------------------
-        console.log("children:", card.children);
-
-        // -------------------------------------------------------------
-        // 14. nextElementSibling & previousElementSibling
-        // -------------------------------------------------------------
-        const secondLi = document.querySelectorAll("ul li")[1];
-        console.log("next sibling:", secondLi.nextElementSibling);
-        console.log("previous sibling:", secondLi.previousElementSibling);
-
-        // -------------------------------------------------------------
-        // 15. closest()
-        // -------------------------------------------------------------
-        const span = document.querySelector(".card span");
-        console.log("closest('.card'):", span.closest(".card"));
-
-    </script>
-
-</body>
-</html>
+ 
