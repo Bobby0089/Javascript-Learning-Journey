@@ -34,3 +34,37 @@ buttons.forEach(function (button) {
 
 
 ```
+
+## project 2
+
+```javascript
+
+const form = document.querySelector('form');
+
+// This use case will give you null value
+// const height = parseInt(document.querySelector('#height').value);
+// console.log(height);
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const height = parseInt(document.querySelector('#height').value);
+  console.log(height);
+
+  const Weight = parseInt(document.querySelector('#weight').value);
+  console.log(Weight);
+
+  const results = document.querySelector('#results');
+
+  if (height === '' || height < 0 || isNaN(height)) {
+    results.innerHTML = ` please enter a valid height ${height}`;
+  } else if (Weight === '' || Weight < 0 || isNaN(Weight)) {
+    results.innerHTML = ` please enter a valid weight ${Weight}`;
+  } else {
+    const bmi = (Weight / ((height * height) / 10000)).toFixed(2);
+    console.log(bmi);
+    results.innerHTML = `${bmi}`;
+  }
+});
+
+
+```
