@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212122; color: rgb(224, 200, 200);">
+    
+</body>
+<script>
+    const div = document.createElement("div") //Creates a new empty <div> element in memory (not yet in the page). Equivalent to: <div></div>
+    div.className = "main" //Adds a class to the div Final HTML: <div class="main"></div>
+    div.id = Math.round(Math.random() *10+1) //Assigns it as the id of the div
+    div.setAttribute("title", "generated title") //Adds an HTML attribute: title="generated title"
+    div.style.backgroundColor = "green" //Styles the background color of the div.
+    div.style.color = "white"
+    div.style.padding = "12px"
+    // div.innerHTML = "Bobby" //This line would directly insert HTML/text inside the div.
+    const addText = document.createTextNode("Bobby") //Creates a text node → "Bobby" This is safer than innerHTML (prevents HTML injection).
+    div.appendChild(addText) //Adds the text "Bobby" inside the div.
+
+    document.body.appendChild(div) //Finally adds the created <div> to the body of the webpage.
+</script>
+</html>
