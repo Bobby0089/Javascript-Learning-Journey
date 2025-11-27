@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212122; color: #fff;">
+    
+    <ul class="language">
+        <li class="js">JavaScript</li>
+    </ul>
+</body>
+<script>
+
+    //1. Basic approach  to Add new Element
+    function addLanguage(langName){
+        const li = document.createElement("li");
+        li.innerHTML = `${langName}`;
+        document.querySelector(".language").
+        appendChild(li);
+    }
+    addLanguage("Python")
+    addLanguage("JAVA")
+
+    function addOptiLan(langName){
+        // Create a new <li> element
+        const li = document.createElement("li")    
+
+        // Insert text into the <li> using a text node
+        li.appendChild(document.createTextNode(`${langName}`))  
+
+        // Append the new <li> to the <ul class="laguage">
+        document.querySelector(".language").appendChild(li)     
+    }
+    addOptiLan("C++")
+
+
+    // Edit the Element
+    function editEle(newName){
+        // Selecting the nth child element
+        const secondChild = document.querySelector("li:nth-child(2)")
+
+        // Create a new <li> with updated text
+        const newLi = document.createElement("li")
+        newLi.textContent = `${newName}`
+
+        // Replace the old second <li> with the new one
+        secondChild.replaceWith(newLi)
+    }
+
+    editEle("goLang")
+
+    //edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    //remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
