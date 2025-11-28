@@ -192,6 +192,8 @@ function newGame() {
 
 ```javascript
 
+//generate a random color
+
 const randomColor = function () {
   const hex = '0123456789ABCDEF';
   let color = '#';
@@ -201,19 +203,25 @@ const randomColor = function () {
   return color;
 };
 
-let start = null;
-
+let intervalId;
 const startChangingColor = function () {
-  start = setInterval(function () {
+  if (!intervalId) {
+    intervalId = setInterval(changeBgColor, 1000);
+  }
+
+  function changeBgColor() {
     document.body.style.backgroundColor = randomColor();
-  }, 1000);
+  }
 };
 const stopChangingColor = function () {
-  clearInterval(start);
+  clearInterval(intervalId);
+  intervalId = null;
 };
 
 document.querySelector('#start').addEventListener('click', startChangingColor);
+
 document.querySelector('#stop').addEventListener('click', stopChangingColor);
+
 
 
 ```
