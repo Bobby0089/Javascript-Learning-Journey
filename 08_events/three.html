@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Bobby</h1>
+    <button id="start">START</button><br><br>
+    <button id="stop">STOP</button>
+</body>
+<script>
+
+    function time() {
+        let date = new Date()
+        console.log("Current time is : ", date.toLocaleTimeString());
+    }
+
+    let timeStart = null;
+
+    document.querySelector("#start").addEventListener("click", function(e){
+        // console.log(e.target.id);
+        let id = e.target.id
+        let button = document.querySelector(`#${id}`)
+        button.style.backgroundColor = "green"
+        button.style.color = "white"
+        // console.log(button)
+        timeStart = setInterval(time,1000)
+    })
+
+    document.querySelector("#stop").addEventListener("click", function(e){
+        clearInterval(timeStart)
+        let id = e.target.id
+        let button = document.querySelector(`#${id}`)
+        button.style.backgroundColor = "red"
+        button.style.color = "white"
+    })
+
+    
+    
+</script>
+</html>
