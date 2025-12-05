@@ -29,12 +29,10 @@ let boolToStr1 = String(true)
 let boolToStr2 = String(false)
 
 //null
-let nullToNum1 = Number(1234)
-let nullToNum2 = Number(0)
-let nullToNum3 = Number()
-let nullToStr1 = String("")
-let nullToStr2 = String("  ")
-let nullToStr3 = String("abc")
+let nullToNum1 = Number(null)
+
+let nullToStr1 = String(null)
+
 
 console.table([
     {Operation: "strToNum1 Bobby", value: strToNum1, TypeOf: typeof(strToNum1)},
@@ -54,11 +52,9 @@ console.table([
     {Operation: "boolToStr1  true", value: boolToStr1, TypeOf: typeof(boolToStr1)},
     {Operation: "boolToStr2 false", value: boolToStr2, TypeOf: typeof(boolToStr2)},
     {Operation: "nullToNum1 1234", value: nullToNum1, TypeOf: typeof(nullToNum1)},
-    {Operation: "nullToNum2 0", value: nullToNum2, TypeOf: typeof(nullToNum2)},
-    {Operation: "nullToNum3 ()", value: nullToNum3, TypeOf: typeof(nullToNum3)},
+   
     {Operation: "nullToStr1 ()", value: nullToStr1, TypeOf: typeof(nullToStr1)},
-    {Operation: "nullToStr2 (  )", value: nullToStr2, TypeOf: typeof(nullToStr2)},
-    {Operation: "nullToStr3  abc", value: nullToStr3, TypeOf: typeof(nullToStr3)}
+    
 ])
 
 
